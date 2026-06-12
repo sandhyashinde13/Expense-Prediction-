@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+
+Expense Prediction
+
+</title>
+
+<link rel="stylesheet"
+
+href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+
+Expense Prediction
+
+</h1>
+
+<div class="line"></div>
+
+<form action="/predict" method="POST">
+
+<label>
+
+Enter Month Number (1-12):
+
+</label>
+
+<br>
+
+<input
+
+type="number"
+
+name="month"
+
+placeholder="Enter month number (1-12)"
+
+required
+
+min="1"
+
+max="12"
+
+>
+
+<br>
+
+<button type="submit">
+
+Predict Expense
+
+</button>
+
+</form>
+
+<div class="result">
+
+<h2>
+
+{{ prediction_text }}
+
+</h2>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
